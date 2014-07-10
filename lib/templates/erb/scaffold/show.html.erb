@@ -4,6 +4,8 @@
       <div class="alert alert-info" id="notice"><%%= notice %></div>
     <%% end %>
 
+    <h1>Showing <%= singular_table_name.titleize %></h1>
+
     <dl class="dl-horizontal">
       <% attributes.reject(&:password_digest?).each do |attribute| -%>
         <dt>
