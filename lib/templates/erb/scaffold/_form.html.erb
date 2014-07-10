@@ -1,3 +1,4 @@
+<div class="panel panel-default">
 <%%= form_for(@<%= singular_table_name %>, :html => {:class => 'form-horizontal'}) do |f| %>
   <%% if @<%= singular_table_name %>.errors.any? %>
     <div id="error_explanation">
@@ -9,7 +10,7 @@
     </div>
   <%% end %>
 
-
+<div class="panel-body">
 <% attributes.each do |attribute| -%>
   <div class="form-group row">
     <% if attribute.password_digest? -%>
@@ -31,11 +32,13 @@
     <% end -%>
   </div>
 <% end -%>
-
+</div>
+<div class="panel-footer">
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <%%= f.submit "Submit", :class => "btn btn-default" %>
     </div>
   </div>
-
+</div>
 <%% end %>
+</div>
